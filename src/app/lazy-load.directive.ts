@@ -1,16 +1,21 @@
 import { Directive, ElementRef, Input } from "@angular/core";
 
+interface ObserverType {
+  observe(beingObserved: any, callback?: (update: any) => any): void;
+  unobserve(beingObserved: any, callback?: (update: any) => any): void;
+}
+
 @Directive({
   selector: "[appLazyLoad]"
 })
 export class LazyLoadDirective {
   @Input() srcdata: string;
-  el: ElementRef;
-  observer: Object;
-  loading_img: string;
-  error_img: string;
+  private el: ElementRef;
+  private observer: ObserverType;
+  private loading_img: string;
+  private error_img: string;
 
-  loadImg(el: ElementRef) {
+  private loadImg(el: ElementRef): void {
     let { srcdata, observer, error_img } = this;
 
     el.nativeElement.src = srcdata;
@@ -26,7 +31,7 @@ export class LazyLoadDirective {
     this.loading_img = "https://clck.ru/LaQ32";
   }
 
-  ngOnInit() {
+  private ngOnInit(): void {
     let { el, observer, loading_img } = this;
     let intersection_observer_config = {
       rootMargin: "100px"
@@ -40,6 +45,6 @@ export class LazyLoadDirective {
         }
       });
     }, intersection_observer_config);
-    observer.observe(el.nativeElement);
+    if (observer) observer.observe(el.nativeElement);
   }
 }
