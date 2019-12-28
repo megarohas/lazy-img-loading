@@ -23,16 +23,18 @@ export class LazyLoadDirective {
   ngOnInit() {
     let el = this.el;
     let observer = this.observer;
-
     el.nativeElement.src = "https://clck.ru/LaADc";
 
-    this.observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.loadImg(el);
-        }
-      });
-    });
-    this.observer.observe(el.nativeElement);
+    observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.loadImg(el);
+          }
+        });
+      },
+      { rootMargin: "100px" }
+    );
+    observer.observe(el.nativeElement);
   }
 }
