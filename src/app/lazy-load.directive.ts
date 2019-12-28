@@ -6,6 +6,15 @@ import { Directive, ElementRef, Input } from "@angular/core";
 export class LazyLoadDirective {
   @Input() srcdata: string;
   el: ElementRef;
+  observer: Object;
+
+  loadImg(el: ElementRef) {
+    let actual_src = this.srcdata;
+    let observer = this.observer;
+
+    el.nativeElement.src = actual_src;
+    observer.unobserve(el.nativeElement);
+  }
 
   constructor(el: ElementRef) {
     this.el = el;
@@ -13,18 +22,17 @@ export class LazyLoadDirective {
 
   ngOnInit() {
     let el = this.el;
-    let actual_src = this.srcdata;
-    el.nativeElement.src =
-      "https://static-steelkiwi-dev.s3.amazonaws.com/media/filer_public/1c/30/1c302b65-8285-4934-8917-7165523e766b/9382e6fa-5df6-433b-a4f3-4ed97bbeaf37.gif";
+    let observer = this.observer;
 
-    let observer = new IntersectionObserver((entries, obs) => {
+    el.nativeElement.src = "https://clck.ru/LaADc";
+
+    this.observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          el.nativeElement.src = actual_src;
-          observer.unobserve(el.nativeElement);
+          this.loadImg(el);
         }
       });
     });
-    observer.observe(el.nativeElement);
+    this.observer.observe(el.nativeElement);
   }
 }
