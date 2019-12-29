@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "lazy-img-loading";
-  private links = [];
+  links = [];
 
   constructor() {
     this.links = [
