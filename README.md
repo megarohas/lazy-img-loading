@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [Deployed version](https://lazy-img-loading.herokuapp.com/)
 
-![Demo](https://i.ibb.co/0j0cBwb/ezgif-4-704ca4a36dd8.gif)
+![Demo](https://i.yapx.ru/GC3BX.gif)
 
 ## Development server
 
