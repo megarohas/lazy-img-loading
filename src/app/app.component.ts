@@ -12,36 +12,44 @@ export class AppComponent {
   constructor() {
     this.links = [
       {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/96/25/CPBNzQ.jpg"
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_snowy_152626_3840x2160.jpg"
       },
       {
         url:
-          "https://img.wallpapersafari.com/tab23let/2560/1700/93/67/efWJLU.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/39/73/uJOVbP.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/94/17/xPiBnz.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/33/15/H0xd3O.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/74/9/VLjGQk.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/96/36/vKl0jY.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/51/70/Q7GoMx.jpg"
-      },
-      {
-        url: "https://img.wallpapersafari.com/tablet/2560/1700/54/90/bA74uy.jpg"
+          "https://000images.wallpaperscraft.com/image/mountain_peak_snow_138292_3840x2160.jpg"
       },
       {
         url:
-          "https://img.wallpapersafari.com/tab23let/2560/1700/76/53/6oEO7I.jpg"
+          "https://images.wallpaperscraft.com/image/mountain_peak_snowy_151176_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_snowy_152403_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_climber_141764_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_slope_151716_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_snowy_149998_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_snow_133763_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://images.wallpaperscraft.com/image/mountain_peak_top_snow_fog_sky_110674_3840x2160.jpg"
+      },
+      {
+        url:
+          "https://000images.wallpaperscraft.com/image/mountain_peak_snow_141605_3840x2160.jpg"
       }
     ];
   }
